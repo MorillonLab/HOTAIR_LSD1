@@ -14,19 +14,19 @@
        IP BAM files :
 
 
-               condition G (CTR) :
+               condition G (CONTROL) :
                            A685C9.bam
                            A685C10.bam
 
-               condition H (HOT) :             
+               condition H (HOTAIR) :             
                            A685C11.bam
                            A685C12.bam  
 
-               condition P (HOTdeltaP) :            
+               condition P (HOTAIR-delta-PRC2) :            
                            A685C13.bam
                            A685C14.bam
 
-               condition L (`HOT`deltaL) :           
+               condition L (HOTAIR-delta-LSD1) :           
                            A685C15.bam
                            A685C16.bam
 
