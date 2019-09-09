@@ -33,19 +33,19 @@
        input BAM files :
 
 
-               condition G (CTR) :
+               condition G (CONTROL) :
                            A684C1.bam
                            A685C2.bam
 
-               condition H (HOT) :             
+               condition H (HOTAIR) :             
                            A684C3.bam
                            A685C4.bam  
 
-               condition P (HOTdeltaP) :            
+               condition P (HOTAIR-delta-PRC2) :            
                            A684C6.bam
                            A684C6.bam
 
-               condition L (HOTdeltaP) :           
+               condition L (HOTAIR-delta-LSD1) :           
                            A684C7.bam
                            A684C8.bam
 
