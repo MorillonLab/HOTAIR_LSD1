@@ -53,13 +53,13 @@
 
     2-b) Peak calling script :
 
-      https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/sicer_script.sh
+   https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/sicer_script.sh
 
 *3) RNA-seq analysis*
 
     3-a) DESeq2 script :
     
-      https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/DESeq2_script_example.R
+   https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/DESeq2_script_example.R
   
     3-b) required dependancies :*
     
