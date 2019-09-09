@@ -61,4 +61,17 @@
     
       https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/DESeq2_script_example.R
   
+    3-b) required dependancies :
   
+    3-c) Usage :
+     
+       In a Unix-like terminal, type :
+     
+         chmod 755 DESeq2_script_example.R
+     
+       To see all the available options, type :
+     
+          ./DESeq2_script_example.R
+     
+     
+     
