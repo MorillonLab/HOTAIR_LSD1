@@ -5,24 +5,26 @@
 
 1) ChIP-seq analysis
 
- 1-a) Description of the files
+   1-a) Description of the files
  
-   IP BAM files :
- 
-           condition G :
-                       A685C9.bam
-                       A685C10.bam
-           condition H :             
-                       A685C11.bam
-                       A685C12.bam
-                       
-           condition P :            
-                       A685C13.bam
-                       A685C14.bam
-            condition L :           
-                       
-                       A685C15.bam
-                       A685C16.bam
+    IP BAM files :
+
+
+            condition G (CTR) :
+                        A685C9.bam
+                        A685C10.bam
+
+            condition H (HOT) :             
+                        A685C11.bam
+                        A685C12.bam  
+
+            condition P (HOTdeltaP) :            
+                        A685C13.bam
+                        A685C14.bam
+
+            condition L (HOTdeltaP) :           
+                        A685C15.bam
+                        A685C16.bam
 
 
 Peak calling script :
