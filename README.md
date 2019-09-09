@@ -97,7 +97,7 @@
      
           ./DESeq2_script_example.R
      
-       To Run conditions GL vs PH, the script has been run with the option :
+       To compare conditions *GL* vs *PH*, the script has been run with the option :
        
            -t "two_firsts_vs_others_combined"
      
