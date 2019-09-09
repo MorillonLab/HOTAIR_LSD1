@@ -56,3 +56,7 @@
 https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/sicer_script.sh
 
 3) RNA-seq analysis
+
+  DESeq2 script :
+  
+  
