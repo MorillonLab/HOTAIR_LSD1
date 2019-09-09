@@ -2,48 +2,50 @@
 
 **HOTAIR lncRNA role in epithelial-mesenchymal transition**
 
+1) Experiments
 
-1) ChIP-seq analysis
 
-   1-a) Description of the files
+2) ChIP-seq analysis
+
+   2-a) Description of the files
  
-    IP BAM files :
+       IP BAM files :
 
 
-            condition G (CTR) :
-                        A685C9.bam
-                        A685C10.bam
+               condition G (CTR) :
+                           A685C9.bam
+                           A685C10.bam
 
-            condition H (HOT) :             
-                        A685C11.bam
-                        A685C12.bam  
+               condition H (HOT) :             
+                           A685C11.bam
+                           A685C12.bam  
 
-            condition P (HOTdeltaP) :            
-                        A685C13.bam
-                        A685C14.bam
+               condition P (HOTdeltaP) :            
+                           A685C13.bam
+                           A685C14.bam
 
-            condition L (HOTdeltaP) :           
-                        A685C15.bam
-                        A685C16.bam
+               condition L (HOTdeltaP) :           
+                           A685C15.bam
+                           A685C16.bam
 
-    input BAM files :
+       input BAM files :
 
 
-            condition G (CTR) :
-                        A684C1.bam
-                        A685C2.bam
+               condition G (CTR) :
+                           A684C1.bam
+                           A685C2.bam
 
-            condition H (HOT) :             
-                        A684C3.bam
-                        A685C4.bam  
+               condition H (HOT) :             
+                           A684C3.bam
+                           A685C4.bam  
 
-            condition P (HOTdeltaP) :            
-                        A684C6.bam
-                        A684C6.bam
+               condition P (HOTdeltaP) :            
+                           A684C6.bam
+                           A684C6.bam
 
-            condition L (HOTdeltaP) :           
-                        A684C7.bam
-                        A684C8.bam
+               condition L (HOTdeltaP) :           
+                           A684C7.bam
+                           A684C8.bam
 
 
 
