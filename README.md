@@ -9,7 +9,7 @@
 
  *2) ChIP-seq analysis*
 
-   *2-a) Description of the files*
+     2-a) Description of the files
  
        IP BAM files :
 
@@ -51,17 +51,17 @@
 
 
 
-   *2-b) Peak calling script :*
+    2-b) Peak calling script :
 
       https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/sicer_script.sh
 
 *3) RNA-seq analysis*
 
-    *3-a) DESeq2 script :*
+    3-a) DESeq2 script :
     
       https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/DESeq2_script_example.R
   
-    *3-b) required dependancies :*
+    3-b) required dependancies :*
     
              - Unix-like terminal (debian, ubuntu...) with grep installed.
 
@@ -87,7 +87,7 @@
                   DOSE
                   clusterProfiler
                   
-    *3-c) Usage :*
+    3-c) Usage :*
      
        In a Unix-like terminal, type :
      
