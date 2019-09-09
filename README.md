@@ -114,7 +114,7 @@
           /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/H2.counts.tsv	H
           /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/H3.counts.tsv	H
       
-      - The results of the comparison GL vs PH is in the directory "G_L_vs_P_H", with the following contents :
+      - The results of the comparison GL vs PH are in the directory "G_L_vs_P_H", with the following contents :
       
          - DESeq_output_*           : raw output table from DESeq2 (annotated with the gff file)
          - sig_diff_*               : table of all significant differentially expressed genes according to the filters (default : padj <= 0.05)
