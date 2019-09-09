@@ -96,8 +96,33 @@
        To see all the available options, type :
      
           ./DESeq2_script_example.R
+          
+       By default, the output are pairwise comparisons ; the minimum parameters are "-f", "-a", and "-o".
      
-       To compare conditions \*GL\* vs \*PH\*, the script has been run with the option :
+       To compare the conditions GL vs PH, the script has been run with the option :
        
            -t "two_firsts_vs_others_combined"
+           
+        The design file looks like this (2 columns, tab-delimited)  :
+        
+          /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/G1.counts.tsv	G
+          /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/G2.counts.tsv	G
+          /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/L2.counts.tsv	L
+          /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/L3.counts.tsv	L
+          /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/P2.counts.tsv	P
+          /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/P3.counts.tsv	P
+          /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/H2.counts.tsv	H
+          /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/H3.counts.tsv	H
+      
+      The results of the comparison GL vs PH is in the directory "G_L_vs_P_H", with the contents :
+      
+         - DESeq_output_*           : raw output from DESeq2 (annotated with the gff file)
+         - sig_diff_*               : all significant differentially expressed genes according to the filters (default : padj <= 0.05)
+         - sig_diff_downregulated_* : significant downregulated genes (default : padj <= 0.05 & log2FC < 0)
+         - sig_diff_upregulated_*   : significant upregulated genes (default : padj <= 0.05 & log2FC > 0)
+         - MAplots & volcano-plots for controls
+
+        
+       
+        
      
