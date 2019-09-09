@@ -26,7 +26,7 @@
                            A685C13.bam
                            A685C14.bam
 
-               condition L (HOTdeltaP) :           
+               condition L (`HOT`deltaL) :           
                            A685C15.bam
                            A685C16.bam
 
