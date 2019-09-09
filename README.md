@@ -5,6 +5,10 @@
 1) Experiments
 
 
+ ![GitHub Logo] https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/images_HOTAIR_LSD1/HOTAIR_LSD1_experiment.pdf
+ Format: ![Alt Text](url)
+
+
 2) ChIP-seq analysis
 
    2-a) Description of the files
