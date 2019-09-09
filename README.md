@@ -4,8 +4,8 @@
 
 1) Experiments
 
-
  ![alt text](images_HOTAIR_LSD1/HOTAIR_LSD1_experiment.pdf)
+
 
 2) ChIP-seq analysis
 
