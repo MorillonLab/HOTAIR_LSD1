@@ -97,13 +97,13 @@
      
           ./DESeq2_script_example.R
           
-       - By default, the output are pairwise comparisons ; the minimum parameters are "-f", "-a", and "-o".
+       - By default, the outputs are pairwise comparisons ; the minimum required parameters are "-f", "-a", and "-o".
      
        - To compare the conditions GL vs PH, the script has been run with the option :
        
            -t "two_firsts_vs_others_combined"
            
-        - The design file looks like this (2 columns, tab-delimited)  :
+        - The design file supplied to the option "-f" looks like this (2 columns, tab-delimited)  :
         
           /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/G1.counts.tsv	G
           /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/G2.counts.tsv	G
