@@ -62,7 +62,31 @@
       https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/DESeq2_script_example.R
   
     3-b) required dependancies :
-  
+    
+             - Unix-like terminal (debian, ubuntu...) with grep installed.
+
+             - R version >= 3.4.3, with :
+
+               -a) R packages from CRAN
+
+                 ggplot2
+                 RColorBrewer
+                 optparse
+                 gplots
+                 pROC
+                 foreach
+                 doParallel	
+                 grid	
+                 BiocParallel
+                 data.table
+
+                -b) R packages from Bioconductor
+
+                  DESeq2
+                  pheatmap
+                  DOSE
+                  clusterProfiler
+                  
     3-c) Usage :
      
        In a Unix-like terminal, type :
