@@ -87,7 +87,7 @@
                   DOSE
                   clusterProfiler
                   
-    3-c) Usage :*
+    3-c) Usage :
      
        In a Unix-like terminal, type :
      
