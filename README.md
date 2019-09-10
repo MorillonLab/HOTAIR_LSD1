@@ -10,8 +10,12 @@
 
  ![](https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/images_HOTAIR_LSD1/HOTAIR_LSD1_experiment.png)
  ![](https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/images_HOTAIR_LSD1/analysis.png)
+ 
+ ---
 
  *2) ChIP-seq analysis*
+ 
+ ---
 
      2-a) Description of the files
  
@@ -66,8 +70,12 @@
        -> compute number of covered nucleotide per peak (images boxplot_distrib_covered_bases_per_peak_* & densityplot_distrib_covered_bases_per_peak_*)
        -> peak distance to TSS (images boxplot_distrib_dist_peak_to_TSS_*)
        -> classify peaks according to the genomic features : "exon", "promoter", "intron", "intergenic", "five_prime_utr"  "three_prime_utr"
+       
+---       
    
 *3) RNA-seq analysis*
+
+---
 
     3-a) DESeq2 script :
     
