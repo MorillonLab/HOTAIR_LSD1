@@ -36,9 +36,10 @@ gap=1000
 #regions to remove from sicer results
 blackRegions="/media/marcgabriel/Transcend/LSD1_metagenes/consensusBlacklist.bed"
 
+#wigtobigwig program from UCSC
 export wigtobigwig="/home/marcgabriel/Desktop/scripts/wigToBigWig"
 
-#bigwigCompare from deeptools
+#bigwigCompare program from deeptools
 export bigwigCompare="bigwigCompare"
 
 ###########################
