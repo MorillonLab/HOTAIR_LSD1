@@ -2,7 +2,11 @@
 
 **HOTAIR lncRNA role in epithelial-mesenchymal transition**
 
+---
+
 *1) Experiments & diagram of the analysis*
+
+---
 
  ![](https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/images_HOTAIR_LSD1/HOTAIR_LSD1_experiment.png)
  ![](https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/images_HOTAIR_LSD1/analysis.png)
