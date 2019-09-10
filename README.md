@@ -57,7 +57,7 @@
 
    -> all the parameters to modify are at the biginning of the script ("input data" part).
    
-    2-c) Intersection of peaks between conditions (script :) : 
+    2-c) Intersection of peaks between conditions (script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks.sh) : 
     
        -> compute number of covered nucleotide per peak (images boxplot_distrib_covered_bases_per_peak_* & densityplot_distrib_covered_bases_per_peak_*)
        -> peak distance to TSS (images boxplot_distrib_dist_peak_to_TSS_*)
