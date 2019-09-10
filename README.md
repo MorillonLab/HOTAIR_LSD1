@@ -55,6 +55,8 @@
 
    https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/sicer_script.sh
 
+   -> all the parameters to modify are at the biginning of the script ("input data" part).
+   
 *3) RNA-seq analysis*
 
     3-a) DESeq2 script :
@@ -116,11 +118,11 @@
       
       - The results of the comparison GL vs PH are in the directory "G_L_vs_P_H", with the following contents :
       
-         - DESeq_output_*           : raw output table from DESeq2 (annotated with the gff file)
-         - sig_diff_*               : table of all significant differentially expressed genes according to the filters (default : padj <= 0.05)
-         - sig_diff_downregulated_* : table of significant downregulated genes (default : padj <= 0.05 & log2FC < 0)
-         - sig_diff_upregulated_*   : table of significant upregulated genes (default : padj <= 0.05 & log2FC > 0)
-         - MAplots & volcano-plots for controls
+         - DESeq_output_*           : raw output table from DESeq2 (annotated with the gff file).
+         - sig_diff_*               : table of all significant differentially expressed genes according to the filters (default : padj <= 0.05).
+         - sig_diff_downregulated_* : table of significant downregulated genes (default : padj <= 0.05 & log2FC < 0).
+         - sig_diff_upregulated_*   : table of significant upregulated genes (default : padj <= 0.05 & log2FC > 0).
+         - MAplots & volcano-plots for controls.
 
         
        
