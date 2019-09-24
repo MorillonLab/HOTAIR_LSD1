@@ -134,6 +134,8 @@
           /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/P3.counts.tsv	P
           /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/H2.counts.tsv	H
           /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/H3.counts.tsv	H
+          
+          -> these files are available at this adress (put the link)
       
       - The results of the comparison GL vs PH are in the directory "G_L_vs_P_H", with the following contents :
       
