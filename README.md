@@ -64,6 +64,7 @@
    https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/sicer_script.sh
 
    -> all the parameters to modify are at the biginning of the script ("input data" part).
+   
    -> the variable "blackRegions" can be initialized with this file : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/data/consensusBlacklist.bed
    
     2-c) Intersection of peaks between conditions : 
