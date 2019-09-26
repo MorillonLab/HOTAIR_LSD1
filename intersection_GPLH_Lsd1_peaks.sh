@@ -13,13 +13,13 @@ export bedops="/home/marcgabriel/Desktop/bedops-2.4.30/bin/bedops"
 export annotation="/home/marcgabriel/Documents/gencode26lift37/gencode.v26lift37.annotation.gff3"
 
 #create intergenic features
-export getIntergenics=$( cd "$(dirname "$0")" ; pwd -P )/getIntergenics.R
+export getIntergenics=$(dirname "$0")/getIntergenics.R
 
 #create intronic features
-export getIntronsByTranscripts=$( cd "$(dirname "$0")" ; pwd -P )/getIntronsByTranscripts.R
+export getIntronsByTranscripts=$(dirname "$0")/getIntronsByTranscripts.R
 
 #classify the peaks
-export classifyPeaks=$( cd "$(dirname "$0")" ; pwd -P )/classifyPeaks.R
+export classifyPeaks=$(dirname "$0")/classifyPeaks.R
 
 
 
