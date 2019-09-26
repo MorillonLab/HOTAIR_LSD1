@@ -145,7 +145,8 @@
          - sig_diff_upregulated_*   : table of significant upregulated genes (default : padj <= 0.05 & log2FC > 0).
          - MAplots & volcano-plots for controls.
 
-    ---       
+
+---       
    
 *4) intersection RNA-seq ChIP-seq*
 
