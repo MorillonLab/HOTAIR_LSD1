@@ -9,7 +9,7 @@ library(plyr)
 library(reshape2)
 
 
-home<-"/media/marcgabriel/eda138bc-95c2-4778-99df-8915815cb86e/Marina_lsd1_test/"
+#home<-"/media/marcgabriel/eda138bc-95c2-4778-99df-8915815cb86e/Marina_lsd1_test/"
 
 #"/media/marcgabriel/eda138bc-95c2-4778-99df-8915815cb86e/Marina_lsd1_test"
 chip_seq_results_G<-read.delim(paste(home,"G_TSS_with_closest_peak.tsv",sep=""),header=T)
