@@ -1,6 +1,8 @@
 #!/bin/bash
 
 
+##### input data #######
+
 export samtools="samtools"
 
 #use bedtools 2.27, with 2.26, groupby is buggy !!
@@ -21,12 +23,36 @@ export getIntronsByTranscripts=$(dirname "$0")/getIntronsByTranscripts.R
 #classify the peaks
 export classifyPeaks=$(dirname "$0")/classifyPeaks.R
 
-
-
-#output_dir="/home/marcgabriel/Documents/Marina_HOTAIR_lsd1/chip_seq_analysis/"
-
 #output dir
 output_dir="/media/marcgabriel/eda138bc-95c2-4778-99df-8915815cb86e/Marina_lsd1_test/"
+
+rscript1=$(dirname "$0")/venn_diagrams_with_numerics.R
+
+rscript2=$(dirname "$0")/venn_chipseq_GHPL.R
+
+getBoxplots=$(dirname "$0")/chipeseq_GHPL_boxplots_dist_to_tss.R
+
+getCoveredNuc=$(dirname "$0")/getCoveredNuc.R
+
+#annotation in gff format
+ref_annot="/home/marcgabriel/Documents/gencode26lift37/gencode.v26lift37.annotation.gff3"
+
+#enriched regions in gff format
+G="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_replicates_merged/A685C9.10.merged_filteredBR.peaks.gff"
+#G="/media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C9.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C10.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
+
+L="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_replicates_merged/A685C15.16.merged_filteredBR.peaks.gff"
+#L="/media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C15.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C16.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
+
+H="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_replicates_merged/A685C11.12.merged_filteredBR.peaks.gff"
+#H="/media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C11.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C12.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
+
+P="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_replicates_merged/A685C13.14.merged_filteredBR.peaks.gff"
+#P="/media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C13.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C14.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
+
+
+#####################################
+
 
 output_dir="${output_dir}/"
 output_dir=$(echo $output_dir |sed 's/\/\//\//g')
@@ -38,34 +64,10 @@ if [ ! -d "$output_dir" ];then
 
 fi
 
-ref_annot="/home/marcgabriel/Documents/gencode26lift37/gencode.v26lift37.annotation.gff3"
-
-
 
 grep -v "^#" $annotation |grep -P "\ttranscript\t"|awk 'OFS="\t"{if($7=="+"){$5=$4}else{$4=$5};print}' | sort -k1,1 -k4,4n >${output_dir}all_TSS.gff
 
 
-rscript1="/home/marcgabriel/Desktop/scripts/venn_diagrams_with_numerics.R"
-
-rscript2="/home/marcgabriel/Desktop/scripts/venn_chipseq_GHPL.R"
-
-getBoxplots="/home/marcgabriel/Desktop/scripts/chipeseq_GHPL_boxplots_dist_to_tss.R"
-
-getCoveredNuc="/home/marcgabriel/Desktop/scripts/getCoveredNuc.R"
-
-### gff files ###
-G="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_replicates_merged/A685C9.10.merged_filteredBR.peaks.gff"
-#G="/media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C9.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C10.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
-
-L="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_replicates_merged/A685C15.16.merged_filteredBR.peaks.gff"
-#L="/media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C15.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C16.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
-
-H="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_replicates_merged/A685C11.12.merged_filteredBR.peaks.gff"
-#H="/media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C11.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C12.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
-
-P="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_replicates_merged/A685C13.14.merged_filteredBR.peaks.gff"
-
-#P="/media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C13.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Maxtor/Lsd1/Chipseq/peak_calling/sicer/run_1/gap1000/filtered_BR/A685C14.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
 original_G=$G
 original_L=$L
 original_H=$H
