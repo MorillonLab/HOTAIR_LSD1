@@ -61,7 +61,7 @@
 
    https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/sicer_script.sh
 
-   -> all the parameters to modify are at the biginning of the script ("input data" part).
+   -> all the parameters to modify are at the beginning of the script ("input data" part).
    
    -> the variable "blackRegions" can be initialized with this file : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/data/consensusBlacklist.bed
    
