@@ -65,10 +65,11 @@
    
    -> the variable "blackRegions" can be initialized with this file : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/data/consensusBlacklist.bed
    
-    2-c) Processing of peaks : 
+   -> The peaks in gff format can be found at this link : https://www.dropbox.com/sh/m1p915bf8flh7vr/AABiI4GdI2S9H7_BKPZMeU07a?dl=0
+    
+    2-c) Processing of peaks around TSS (-5/+5kb):
+    
 (script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks.sh)
-
-       The peaks in gff format can be found at this link : https://www.dropbox.com/sh/m1p915bf8flh7vr/AABiI4GdI2S9H7_BKPZMeU07a?dl=0
 
 
        purpose :
@@ -84,6 +85,11 @@
          -> TSS with peaks around -5/+5 kb (table peaks_around_TSS_Minus5kb_Plus5kb.tsv)
          
          
+    2-d) Processing of peaks inside genes :
+    
+(script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks.sh)
+     
+                
        
 ---       
    
