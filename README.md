@@ -73,13 +73,17 @@
 
        purpose :
        
-         -> compute number of covered nucleotide per peak (images boxplot_distrib_covered_bases_per_peak_* & densityplot_distrib_covered_bases_per_peak_*)
+         -> number of covered nucleotide per peak (images boxplot_distrib_covered_bases_per_peak_* & densityplot_distrib_covered_bases_per_peak_*)
          
          -> peak distance to TSS (images boxplot_distrib_dist_peak_to_TSS_*)
          
-         -> classify peaks according to the genomic features : "exon", "promoter", "intron", "intergenic", "five_prime_utr"  "three_prime_utr"
+         -> peaks according to the genomic features : "exon", "promoter", "intron", "intergenic", "five_prime_utr"  "three_prime_utr" (images *_peak_distrib.png)
          
-         -> give TSS with peaks around -5/+5 kb
+         -> annotated peaks (tables *_TSS_with_closest_peak.tsv)
+         
+         -> TSS with peaks around -5/+5 kb (table peaks_around_TSS_Minus5kb_Plus5kb.tsv)
+         
+         
        
 ---       
    
