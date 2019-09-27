@@ -178,11 +178,14 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
 
  ---
 
- *4) Intersection of peaks (-5/+5 around TSS and inside of genes) with RNA-seq (upregulated genes in High & Low migration phenotype) *
+ *4) Intersection of peaks (-5/+5 around TSS and inside of genes) with RNA-seq (upregulated genes in High & Low migration phenotype)*
  
  ---
-    
+
+script for TSS :
 https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged.sh
+
+script for genebody (inside of genes) :
 https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged_genebody.sh
      
        
