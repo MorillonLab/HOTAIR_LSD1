@@ -160,7 +160,7 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
          
          -> peak distance to TSS (images boxplot_distrib_dist_peak_to_TSS_*)
          
-         -> peaks according to the genomic features : "exon", "promoter", "intron", "intergenic", "five_prime_utr"  "three_prime_utr" (images *_peak_distrib.png)
+         -> genomic distribution of the peaks : "exon", "promoter", "intron", "intergenic", "five_prime_utr"  "three_prime_utr" (images *_peak_distrib.png)
          
          -> annotated peaks (tables *_TSS_with_closest_peak.tsv)
          
