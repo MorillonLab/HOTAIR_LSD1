@@ -65,7 +65,7 @@
    
    -> the variable "blackRegions" can be initialized with this file : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/data/consensusBlacklist.bed
    
-    2-c) Intersection of peaks between conditions : 
+    2-c) Processing of peaks : 
 (script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks.sh)
 
        The peaks in gff format can be found at this link : https://www.dropbox.com/sh/m1p915bf8flh7vr/AABiI4GdI2S9H7_BKPZMeU07a?dl=0
@@ -78,6 +78,8 @@
          -> peak distance to TSS (images boxplot_distrib_dist_peak_to_TSS_*)
          
          -> classify peaks according to the genomic features : "exon", "promoter", "intron", "intergenic", "five_prime_utr"  "three_prime_utr"
+         
+         -> give TSS with peaks around -5/+5 kb
        
 ---       
    
