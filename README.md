@@ -65,7 +65,7 @@
    
    -> the variable "blackRegions" can be initialized with this file : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/data/consensusBlacklist.bed
    
-   -> The peaks in gff format can be found at this link : https://www.dropbox.com/sh/m1p915bf8flh7vr/AABiI4GdI2S9H7_BKPZMeU07a?dl=0
+   -> The peaks in gff format can be found at this link : http://xfer.curie.fr/get/q1GyGKkrEIQ/HOTAIR_LSD1_merged_filteredBR_peaks_gff.zip
     
     2-c) Processing of peaks around TSS (-5/+5kb): 
 (script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks.sh)
