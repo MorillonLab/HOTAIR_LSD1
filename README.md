@@ -76,7 +76,6 @@ The gencode annotation for the variable "annotation" can be found here (uncompre
 
 ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mapping/gencode.v26lift37.annotation.gff3.gz
 
-
        purpose :
        
          -> number of covered nucleotide per peak (images boxplot_distrib_covered_bases_per_peak_* & densityplot_distrib_covered_bases_per_peak_*)
@@ -91,7 +90,9 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
          
          
     2-d) Processing of peaks inside genes :    
-(script :)
+(script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_inGenes.sh)
+
+      purpose : same as above, but for peaks inside genes
      
                 
        
