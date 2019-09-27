@@ -8,7 +8,7 @@ export samtools="samtools"
 #use bedtools 2.27, with 2.26, groupby is buggy !!
 export bedtools="/home/marcgabriel/Desktop/bedtools2/bin/bedtools"
 
-#bedops program
+#bedops program https://bedops.readthedocs.io/en/latest/
 export bedops="/home/marcgabriel/Desktop/bedops-2.4.30/bin/bedops"
 
 #gff
