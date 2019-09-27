@@ -67,12 +67,14 @@
    
    -> The peaks in gff format can be found at this link : https://www.dropbox.com/sh/m1p915bf8flh7vr/AABiI4GdI2S9H7_BKPZMeU07a?dl=0
     
-    2-c) Processing of peaks around TSS (-5/+5kb):
-    
+    2-c) Processing of peaks around TSS (-5/+5kb): 
 (script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks.sh)
+    
 
-The gencode annotation for the variable "annotation" can be found here (uncompress it) : [](ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mapping/gencode.v26lift37.annotation.gff3.gz)
 
+The gencode annotation for the variable "annotation" can be found here (uncompress it) : 
+
+ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mapping/gencode.v26lift37.annotation.gff3.gz
 
 
        purpose :
@@ -88,9 +90,8 @@ The gencode annotation for the variable "annotation" can be found here (uncompre
          -> TSS with peaks around -5/+5 kb (table peaks_around_TSS_Minus5kb_Plus5kb.tsv)
          
          
-    2-d) Processing of peaks inside genes :
-    
-(script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks.sh)
+    2-d) Processing of peaks inside genes :    
+(script :)
      
                 
        
