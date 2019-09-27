@@ -1,15 +1,50 @@
 #!/bin/bash
 
+##### input data #######
 
 export samtools="samtools"
 
-#2.27, with 2.26, groupby is buggy !!
+#use bedtools 2.27, with 2.26, groupby is buggy !!
 export bedtools="/home/marcgabriel/Desktop/bedtools2/bin/bedtools"
 
+#bedops program https://bedops.readthedocs.io/en/latest/
 export bedops="/home/marcgabriel/Desktop/bedops-2.4.30/bin/bedops"
 
+#annotation in gff format
+export annotation="/home/marcgabriel/Documents/gencode26lift37/gencode.v26lift37.annotation.gff3"
 
+#create intergenic features
+export getIntergenics=$(dirname "$0")/getIntergenics.R
 
+#create intronic features
+export getIntronsByTranscripts=$(dirname "$0")/getIntronsByTranscripts.R
+
+#classify the peaks
+export classifyPeaks=$(dirname "$0")/classifyPeaks.R
+
+#output dir
+output_dir="/media/marcgabriel/eda138bc-95c2-4778-99df-8915815cb86e/Marina_lsd1_test/"
+
+rscript1=$(dirname "$0")/venn_diagrams_with_numerics.R
+chmod 755 $rscript1
+
+rscript2=$(dirname "$0")/venn_chipseq_GHPL.R
+chmod 755 $rscript2
+
+rscript3=$(dirname "$0")/venn_lsd1_diff_genebody.R
+chmod 755 $rscript3
+
+getBoxplots=$(dirname "$0")/chipeseq_GHPL_boxplots_dist_to_tss.R
+chmod 755 $getBoxplots
+
+getCoveredNuc=$(dirname "$0")/getCoveredNuc.R
+chmod 755 $getCoveredNuc
+
+#upregulated genes in high and low migration phenotype
+LMS_HMS_file=$(dirname "$0")/HMS_LMS.xlsx
+
+#gene IDs & corresponding gene types (2 columns, tab-delimited)
+gene_type=$(dirname "$0")/matching_gene_name_types.tsv
 #output_dir="/home/marcgabriel/Documents/Marina_HOTAIR_lsd1/chip_seq_analysis/"
 
 #output_dir="/media/marcgabriel/eda138bc-95c2-4778-99df-8915815cb86e/Marina_lsd1_test/"
@@ -25,24 +60,10 @@ if [ ! -d "$output_dir" ];then
 
 fi
 
-ref_annot="/home/marcgabriel/Documents/gencode26lift37/gencode.v26lift37.annotation.gff3"
 
-#warning !! : redo the intersection with the transcripts, not the gene, because when we select the center of the peak region, we could take the snoRNAs & miRNAs
+grep -v "^#" $annotation |grep -P "\ttranscript\t"|awk 'OFS="\t"{if($7=="+"){$5=$4}else{$4=$5};print}' | sort -k1,1 -k4,4n >${output_dir}all_TSS.gff
+grep -v "^#" $annotation |grep -P "\tgene\t"| sort -k1,1 -k4,4n >${output_dir}all_gene_body.gff
 
-#"\tgene\t"
-
-
-grep -v "^#" $ref_annot |grep -P "\ttranscript\t"|awk 'OFS="\t"{if($7=="+"){$5=$4}else{$4=$5};print}' | sort -k1,1 -k4,4n >${output_dir}all_TSS.gff
-grep -v "^#" $ref_annot |grep -P "\tgene\t"| sort -k1,1 -k4,4n >${output_dir}all_gene_body.gff
-
-
-rscript1="/home/marcgabriel/Desktop/scripts/venn_diagrams_with_numerics.R"
-
-rscript2="/home/marcgabriel/Desktop/scripts/venn_chipseq_GHPL.R"
-
-getBoxplots="/home/marcgabriel/Desktop/scripts/chipeseq_GHPL_boxplots_dist_to_tss.R"
-
-getCoveredNuc="/home/marcgabriel/Desktop/scripts/getCoveredNuc.R"
 
 ### gff files ###
 #G="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C9.10.merged_filteredBR.peaks.gff"
@@ -59,10 +80,6 @@ H="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C11
 P="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C13.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C14.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
 
 ################
-
-
-
-#######################################################
 
 
 ######### processing of bed loc files (dev) ###############
@@ -150,17 +167,6 @@ P_bis="${output_dir}P_peaks_all_rep_bis.gff3"
 
 
 ###################################### end of dev ##########
-
-
-#################
-
-export annotation="/home/marcgabriel/Documents/gencode26lift37/gencode.v26lift37.annotation.gff3"
-
-export getIntergenics="/home/marcgabriel/Desktop/scripts/getIntergenics.R"
-
-export getIntronsByTranscripts="/home/marcgabriel/Desktop/scripts/getIntronsByTranscripts.R"
-
-classifyPeaks="/home/marcgabriel/Desktop/scripts/classifyPeaks.R"
 
 
 ######### closest peaks to TSS ####
@@ -327,3 +333,7 @@ echo -e "P\t$my_num" >>${output_dir}peaks_around_TSS_Minus0kb_Plus0kb.tsv
 awk 'OFS="\t"{split($9,a,";");b="";for(i=1;i<=length(a);i++){if(a[i]~/gene_name/){b=a[i]}};print $1,$4,$7,b,$NF,$(NF-1)}' ${output_dir}P_closest_feat.bed |sed 's/gene_name=//g'|awk 'function abs(v){return v < 0 ? -v : v}{OFS="\t";if($5==0){print}else{if(abs($5)<=0.000){print}}}' |awk '{if($NF~/P1/ && $NF~/P2/){print}}' |sort -u -k4,4|cat <(echo -e "chromosome\ttranscript_start\ttranscript_strand\tgene_name\tdist_peak_to_transcript_loc\tpeaks_group") - >${output_dir}P_genes_with_peaks_in_both_rep.tsv
 
 awk 'OFS="\t"{split($9,a,";");b="";for(i=1;i<=length(a);i++){if(a[i]~/gene_name/){b=a[i]}};print $1,$4,$7,b,$NF,$(NF-1)}' ${output_dir}P_closest_feat.bed |sed 's/gene_name=//g'|awk 'function abs(v){return v < 0 ? -v : v}{OFS="\t";if($5==0){print}else{if(abs($5)<=0.000){print}}}' |awk '{if(($NF~/P1/ && $NF!~/P2/) || ($NF~/P2/ && $NF!~/P1/)){print}}' |sort -u -k4,4|cat <(echo -e "chromosome\ttranscript_start\ttranscript_strand\tgene_name\tdist_peak_to_transcript_loc\tpeaks_group") - >${output_dir}P_genes_with_peaks_in_just_one_rep.tsv
+
+
+$rscript3 $output_dir $annotation $LMS_HMS_file $gene_type
+
