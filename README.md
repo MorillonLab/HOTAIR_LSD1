@@ -104,7 +104,7 @@ https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_pe
 https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged_genebody.sh
      
      
-     Remarks : the result of these 4 scripts must be in 4 different directory (different "outpu_dir" for each)
+***Remarks : the result of these 4 scripts must be in 4 different directory (different "outpu_dir" for each)***
                 
        
 ---       
