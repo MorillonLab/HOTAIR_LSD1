@@ -11,7 +11,7 @@ export bedtools="/home/marcgabriel/Desktop/bedtools2/bin/bedtools"
 #bedops program https://bedops.readthedocs.io/en/latest/
 export bedops="/home/marcgabriel/Desktop/bedops-2.4.30/bin/bedops"
 
-#gff
+#annotation in gff format
 export annotation="/home/marcgabriel/Documents/gencode26lift37/gencode.v26lift37.annotation.gff3"
 
 #create intergenic features
@@ -33,9 +33,6 @@ rscript2=$(dirname "$0")/venn_chipseq_GHPL.R
 getBoxplots=$(dirname "$0")/chipeseq_GHPL_boxplots_dist_to_tss.R
 
 getCoveredNuc=$(dirname "$0")/getCoveredNuc.R
-
-#annotation in gff format
-ref_annot="/home/marcgabriel/Documents/gencode26lift37/gencode.v26lift37.annotation.gff3"
 
 #enriched regions in gff format
 G="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_replicates_merged/A685C9.10.merged_filteredBR.peaks.gff"
