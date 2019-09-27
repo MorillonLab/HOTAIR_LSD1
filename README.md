@@ -166,7 +166,7 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
           /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/H3.counts.tsv	H
           
           -> these files are available at this adress :
- http://xfer.curie.fr/get/cHZjhx2qJg2/HOTAIR_LSD1_RNAseq_gene_counts.zip)
+ http://xfer.curie.fr/get/cHZjhx2qJg2/HOTAIR_LSD1_RNAseq_gene_counts.zip
  
       - The results of the comparison GL vs PH are in the directory "G_L_vs_P_H", with the following contents :
       
