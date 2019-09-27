@@ -55,7 +55,7 @@
                            A684C7.bam
                            A684C8.bam
 
-
+[]()
 
     2-b) Peak calling script :
 
@@ -88,8 +88,8 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
          
          -> TSS with peaks around -5/+5 kb (table peaks_around_TSS_Minus5kb_Plus5kb.tsv)
          
-    
-    
+[]()         
+          
     
     2-d) Processing of peaks inside genes :    
 (script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_inGenes.sh)
@@ -107,6 +107,8 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
     3-a) DESeq2 script :
     
    https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/DESeq2_script_example.R
+  
+  []()
   
     3-b) required dependancies :*
     
@@ -134,6 +136,8 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
                   DOSE
                   clusterProfiler
                   
+[]()
+    
     3-c) Usage :
      
        - In a Unix-like terminal, type :
@@ -162,8 +166,8 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
           /home/marcgabriel/Documents/Marina_HOTAIR_lsd1/diff_expression/H3.counts.tsv	H
           
           -> these files are available at this adress :
-[](http://xfer.curie.fr/get/cHZjhx2qJg2/HOTAIR_LSD1_RNAseq_gene_counts.zip)
-
+ http://xfer.curie.fr/get/cHZjhx2qJg2/HOTAIR_LSD1_RNAseq_gene_counts.zip)
+ 
       - The results of the comparison GL vs PH are in the directory "G_L_vs_P_H", with the following contents :
       
          - DESeq_output_*           : raw output table from DESeq2 (annotated with the gff file).
