@@ -110,7 +110,7 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
   
   []()
   
-    3-b) required dependancies :*
+    3-b) required dependancies :
     
              - Unix-like terminal (debian, ubuntu...) with grep installed.
 
