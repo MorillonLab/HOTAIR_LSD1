@@ -95,7 +95,14 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
 (script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_inGenes.sh)
 
       purpose : same as above, but for peaks inside genes
+      
+    2-e) Processing of peaks (replicates not merged) : -5/+5 around TSS & genebody
+    
+https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged.sh
+https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged_genebody.sh
      
+     
+     Remarks : the result of these 4 scripts must be in 4 different directory (different "outpu_dir" for each)
                 
        
 ---       
