@@ -96,6 +96,8 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
 
       purpose : same as above, but for peaks inside genes
       
+[]()
+      
     2-e) Processing of peaks (replicates not merged) : -5/+5 around TSS & genebody
     
 https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged.sh
