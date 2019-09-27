@@ -72,7 +72,9 @@
 (script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks.sh)
 
 The gencode annotation for the variable "annotation" can be found here (uncompress it) : 
+
 ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mapping/gencode.v26lift37.annotation.gff3.gz
+
 
 
        purpose :
