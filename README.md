@@ -88,7 +88,9 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
          
          -> TSS with peaks around -5/+5 kb (table peaks_around_TSS_Minus5kb_Plus5kb.tsv)
          
-         
+    
+    
+    
     2-d) Processing of peaks inside genes :    
 (script : https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_inGenes.sh)
 
