@@ -222,7 +222,7 @@ https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_pe
  
 []()
 
-    4-c) Run in 3rd this script for to combine the results of 4-a) & 4-b):
+    4-c) Run in 3rd this script to combine the results of 4-a) & 4-b):
 
 script to combine results of 4-a) & 4-b) https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged_genebody.sh
      
