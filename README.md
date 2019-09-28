@@ -192,10 +192,10 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
  
  -> The peaks not merged can be found here (go to section 3-a) to see to which condition each file with the prefix A685C* belongs) : http://xfer.curie.fr/get/9JHuo1YBC2w/HOTAIR_LSD1_not_merged_filteredBR_peaks_bed.zip
 
-script for TSS (replace the the bed files with the ones above) :
+script for TSS (replace the peaks in bed format in "input data" with the ones in the link above) :
 https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged.sh
 
-script for genebody (replace the the bed files with the ones above) :
+script for genebody (replace the peaks in bed format in "input data" with the ones in the link above) :
 https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged_genebody.sh
      
        
