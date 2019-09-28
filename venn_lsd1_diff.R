@@ -58,7 +58,7 @@ LocationOfThisScript = function() # Function LocationOfThisScript returns the lo
 current.dir = paste(LocationOfThisScript(),"/",sep="")
 
 #script that allows recursive intersections
-source(paste(current.dir,"getAllCombinations.R"),sep="")
+source(paste(current.dir,"getAllCombinations.R",sep=""))
 
 
 setwd(home)
