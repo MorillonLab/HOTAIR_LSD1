@@ -86,7 +86,13 @@
          - sig_diff_downregulated_* : table of significant downregulated genes (default : padj <= 0.05 & log2FC < 0).
          - sig_diff_upregulated_*   : table of significant upregulated genes (default : padj <= 0.05 & log2FC > 0).
          - MAplots & volcano-plots for controls.
-         
+ 
+ 
+      We define as :
+          - HMS (High migration set) : genes upregulated in H & P conditions (padj < 0.05, FoldChange > 1.5).
+          - LMS (Low migration set)  : genes upregulated in G & L conditions (= downregulated in H & P conditions ; padj < 0.05, FoldChange <  0.69).
+    
+ 
  ---
 
  *3) ChIP-seq analysis*
@@ -181,6 +187,8 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
  *4) Intersection of peaks (-5/+5 around TSS and inside of genes) with RNA-seq (upregulated genes in High & Low migration phenotype)*
  
  ---
+ 
+ * Remarks : As the final peaks used until there are the ones common between replicates, to make the intersection of the peaks with the differentially expressed genes from the RNA-seq data, and avoiding bias, we need to use 
 
 script for TSS :
 https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged.sh
