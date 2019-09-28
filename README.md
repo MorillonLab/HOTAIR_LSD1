@@ -224,7 +224,7 @@ https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_pe
 
     4-c) Run in 3rd this script to combine the results of 4-a) & 4-b):
 
-script to combine results of 4-a) & 4-b) https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged_genebody.sh
+script to combine results of 4-a) & 4-b) https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/venn_lsd1_diff_TSS_and_gene_body_combined.R
      
      
       Usage :
@@ -239,3 +239,4 @@ script to combine results of 4-a) & 4-b) https://github.com/MorillonLab/HOTAIR_L
        home3 : output directory of the script "intersection_GPLH_Lsd1_peaks_rep_not_merged.sh"
        
     The "official_annotation" parameter is the file used in the section 3-c) : ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mapping/gencode.v26lift37.annotation.gff3.gz (uncompress it)
+    
