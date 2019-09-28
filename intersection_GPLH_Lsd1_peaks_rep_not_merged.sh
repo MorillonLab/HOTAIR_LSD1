@@ -14,6 +14,24 @@ export bedops="/home/marcgabriel/Desktop/bedops-2.4.30/bin/bedops"
 #annotation in gff format
 export annotation="/home/marcgabriel/Documents/gencode26lift37/gencode.v26lift37.annotation.gff3"
 
+#output dir
+output_dir="/media/marcgabriel/Transcend/LSD1_metagenes/Marina_peaks_analysis_rep_not_merged/"
+
+### peaks in bed format (2 per condition) ###
+#G="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C9.10.merged_filteredBR.peaks.gff"
+G="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C9.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C10.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
+
+#L="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C15.16.merged_filteredBR.peaks.gff"
+L="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C15.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C16.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
+
+#H="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C11.12.merged_filteredBR.peaks.gff"
+H="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C11.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C12.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
+
+#P="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C13.14.merged_filteredBR.peaks.gff"
+
+P="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C13.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C14.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
+
+
 #create intergenic features
 export getIntergenics=$(dirname "$0")/getIntergenics.R
 
@@ -23,8 +41,6 @@ export getIntronsByTranscripts=$(dirname "$0")/getIntronsByTranscripts.R
 #classify the peaks
 export classifyPeaks=$(dirname "$0")/classifyPeaks.R
 
-#output dir
-output_dir="/media/marcgabriel/eda138bc-95c2-4778-99df-8915815cb86e/Marina_lsd1_test/"
 
 rscript1=$(dirname "$0")/venn_diagrams_with_numerics.R
 chmod 755 $rscript1
@@ -47,21 +63,6 @@ LMS_HMS_file=$(dirname "$0")/HMS_LMS.xlsx
 #gene IDs & corresponding gene types (2 columns, tab-delimited)
 gene_type=$(dirname "$0")/matching_gene_name_types.tsv
 
-### gff files ###
-#G="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C9.10.merged_filteredBR.peaks.gff"
-G="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C9.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C10.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
-
-#L="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C15.16.merged_filteredBR.peaks.gff"
-L="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C15.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C16.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
-
-#H="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C11.12.merged_filteredBR.peaks.gff"
-H="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C11.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C12.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
-
-#P="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C13.14.merged_filteredBR.peaks.gff"
-
-P="/media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C13.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed /media/marcgabriel/Transcend/LSD1_metagenes/original_peaks_not_merged/A685C14.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed"
-
-
 ###############
 
 
@@ -78,11 +79,6 @@ fi
 
 
 grep -v "^#" $annotation |grep -P "\ttranscript\t"|awk 'OFS="\t"{if($7=="+"){$5=$4}else{$4=$5};print}' | sort -k1,1 -k4,4n >${output_dir}all_TSS.gff
-
-
-
-################
-
 
 
 #######################################################
