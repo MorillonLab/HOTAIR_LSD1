@@ -190,7 +190,7 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
  
  -> Remarks : As the final peaks used until there are the ones common between replicates, to make the intersection of the peaks with the differentially expressed genes (HMS & LMS), and avoiding bias, we need to use the peaks of each replicate.
  
- -> The peaks not merged can be found here (go to section 3-a) to see to which condition each file with the prefix A685C* belongs) : http://xfer.curie.fr/get/9JHuo1YBC2w/HOTAIR_LSD1_not_merged_filteredBR_peaks_bed.zip
+ -> The peaks not merged (bed format) can be found here (go to section *3-a)* to see to which condition each file with the prefix A685C* belongs) : http://xfer.curie.fr/get/9JHuo1YBC2w/HOTAIR_LSD1_not_merged_filteredBR_peaks_bed.zip
 
 []()
 
@@ -224,7 +224,7 @@ https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_pe
 
     4-c) Run in 3rd this script to combine the results of 4-a) & 4-b):
 
-script to combine results of 4-a) & 4-b) https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/venn_lsd1_diff_TSS_and_gene_body_combined.R
+script to combine results of *4-a)* & *4-b)* https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/venn_lsd1_diff_TSS_and_gene_body_combined.R
      
      
       Usage :
