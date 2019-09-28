@@ -216,7 +216,17 @@ https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_pe
 
 script to combine results of 4-a) & 4-b) https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged_genebody.sh
      
-     Usage :
+     Required dependancies (R packages) :
+     
+           gdata
+           eulerr
+           lattice
+           latticeExtra
+           VennDiagram
+           xlsx
+           pdp
+     
+      Usage :
 
        ./venn_lsd1_diff_TSS_and_gene_body_combined.R home1 home2 home3 official_annotation
 
