@@ -200,6 +200,16 @@ script for TSS (replace the peaks in bed format in "input data" with the ones in
 https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged.sh
 
     warning : use a new output directory name for the results
+          
+    Required dependancies (R packages) :
+     
+           gdata
+           eulerr
+           lattice
+           latticeExtra
+           VennDiagram
+           xlsx
+           pdp
 
 []()
 
@@ -216,15 +226,6 @@ https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_pe
 
 script to combine results of 4-a) & 4-b) https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/intersection_GPLH_Lsd1_peaks_rep_not_merged_genebody.sh
      
-     Required dependancies (R packages) :
-     
-           gdata
-           eulerr
-           lattice
-           latticeExtra
-           VennDiagram
-           xlsx
-           pdp
      
       Usage :
 
