@@ -2,7 +2,9 @@
 
 ---
 
-*1) Experiments & diagram of the analysis*
+
+- 1 ) Experiments & diagram of the analysis
+
 
 ---
 
@@ -11,7 +13,7 @@
  
  ---
  
- *2) RNA-seq analysis*
+ - 2 ) RNA-seq analysis
 
 ---
 
@@ -95,7 +97,7 @@
  
  ---
 
- *3) ChIP-seq analysis*
+ - 3 ) ChIP-seq analysis*
  
  ---
 
@@ -184,7 +186,7 @@ ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/GRCh37_mappin
 
  ---
 
- *4) Intersection of peaks (-5/+5 around TSS and inside of genes) with RNA-seq (upregulated genes in High & Low migration phenotype)*
+ - 4 ) Intersection of peaks (-5/+5 around TSS and inside of genes) with RNA-seq (upregulated genes in High & Low migration phenotype)*
  
  ---
  
