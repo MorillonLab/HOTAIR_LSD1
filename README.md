@@ -20,7 +20,8 @@
     2-a) DESeq2 script :
     
     
-         https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/DESeq2_script_example.R
+   https://github.com/MorillonLab/HOTAIR_LSD1/blob/master/DESeq2_script_example.R
+  
   
   []()
   
