@@ -18,7 +18,7 @@
 #todo : adapt the download of bioconductor packages to the latest version of R (>= version 3.5)
 ########################################################################
 
-cran_packages<-c("optparse","ggplot2","gplots","RColorBrewer","pROC","foreach","doParallel","grid","BiocParallel","data.table")
+cran_packages<-c("optparse","ggplot2","gplots","RColorBrewer","pROC","foreach","doParallel","grid","BiocParallel","data.table","pheatmap")
 
 for(one_package in cran_packages){
   
@@ -30,7 +30,7 @@ for(one_package in cran_packages){
   
 }
 
-bioc_packages<-c("DESeq2","pheatmap","clusterProfiler","DOSE")
+bioc_packages<-c("DESeq2","clusterProfiler","DOSE")
 
 source("https://bioconductor.org/biocLite.R")
 
