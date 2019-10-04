@@ -81,7 +81,7 @@ rep1_all_input_bed_files=("A684C1.bam"
 
 for one_file in $(seq 0 $((${#rep1_all_IP_bed_files[*]}-1)));do
 
-   if [ ! -f "${outputDir}${rep1_all_IP_bed_files[$one_file]}-W200-G1000-FDR0.05-islandfiltered.bed" ];then
+   if [ ! -f "${outputDir}${rep1_all_IP_bed_files[$one_file]}-W200-G1000-islands-summary-FDR0.05" ];then
    
       echo -e "sicer files missing for ${rep1_all_IP_bed_files[$one_file]}.unique.bam, we're going to re-build them...\n"
 
