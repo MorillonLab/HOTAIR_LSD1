@@ -85,11 +85,15 @@ for one_file in $(seq 0 $((${#rep1_all_IP_bed_files[*]}-1)));do
    
       echo -e "sicer files missing for ${rep1_all_IP_bed_files[$one_file]}.unique.bam, we're going to re-build them...\n"
 
+      IP_bam=$(find ${inputDir} -name "${rep1_all_IP_bed_files[$one_file]}")
+      
+      input_bam=$(find ${inputDir} -name "${rep1_all_input_bed_files[$one_file]}")
+
       #take only unique mapped reads for IP
-      samtools view -h ${inputDir}${rep1_all_IP_bed_files[$one_file]}|grep -v "XS:i"|samtools view -Sbh - >${outputDir}${rep1_all_IP_bed_files[$one_file]}.unique.bam
-    
+      samtools view -h ${IP_bam}|grep -v "XS:i"|samtools view -Sbh - >${outputDir}${rep1_all_IP_bed_files[$one_file]}.unique.bam
+      
       #take only unique mapped reads for input
-      samtools view -h ${inputDir}${rep1_all_input_bed_files[$one_file]}|grep -v "XS:i"|samtools view -Sbh - >${outputDir}${rep1_all_input_bed_files[$one_file]}.unique.bam
+      samtools view -h ${input_bam}|grep -v "XS:i"|samtools view -Sbh - >${outputDir}${rep1_all_input_bed_files[$one_file]}.unique.bam
     
       #convert both files in bed format (need by SICER)
       bedtools bamtobed -i ${outputDir}${rep1_all_IP_bed_files[$one_file]}.unique.bam >${outputDir}${rep1_all_IP_bed_files[$one_file]}.bed
