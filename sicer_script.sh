@@ -110,8 +110,9 @@ for one_file in $(seq 0 $((${#rep1_all_IP_bed_files[*]}-1)));do
    
    fi
    
-   $bedtools intersect -v -a ${outputDir}${rep1_all_IP_bed_files[$one_file]}-W200-G1000-islands-summary-FDR0.05 -b $blackRegions|awk 'OFS="\t"{$4=".";$5=$8;print $1,$2,$3,$4,$5} > ${outputDir}${rep1_all_IP_bed_files[$one_file]}.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed
-   
+   #peaks in BED format
+   $bedtools intersect -v -a ${outputDir}${rep1_all_IP_bed_files[$one_file]}-W200-G1000-islands-summary-FDR0.05 -b $blackRegions|awk 'OFS="\t"{$4=".";$5=$8;print $1,$2,$3,$4,$5} > ${outputDir}${rep1_all_IP_bed_files[$one_file]}-W200-G1000-islands-summary-FDR0.05_filteredBR.bed
+  
 done
 
 ##################################################################
@@ -124,6 +125,7 @@ function mergePeaks {
 	
 	var1=$1
 	var2=$2
+	
 	#give peak id to define file source
 	awk '{print $0"\t","peakA685C'${var1}'-"NR}' ${outputDir}A685C${var1}.bam.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed | cut -f 1,2,3,9 > ${outputDir}A685C${var1}.unique-W200-G1000-islands-summary-FDR0.05_filteredBR_id.bed
 	awk '{print $0"\t","peakA685C'${var2}'-"NR}' ${outputDir}A685C${var2}.bam.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed | cut -f 1,2,3,9 > ${outputDir}A685C${var2}.unique-W200-G1000-islands-summary-FDR0.05_filteredBR_id.bed
