@@ -110,7 +110,7 @@ for one_file in $(seq 0 $((${#rep1_all_IP_bed_files[*]}-1)));do
    
    fi
    
-   $bedtools intersect -v -a ${outputDir}${rep1_all_IP_bed_files[$one_file]}-W200-G1000-islands-summary-FDR0.05 -b $blackRegions > ${outputDir}${rep1_all_IP_bed_files[$one_file]}.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed
+   $bedtools intersect -v -a ${outputDir}${rep1_all_IP_bed_files[$one_file]}-W200-G1000-islands-summary-FDR0.05 -b $blackRegions|awk 'OFS="\t"{$4=".";$5=$8;print $1,$2,$3,$4,$5} > ${outputDir}${rep1_all_IP_bed_files[$one_file]}.unique-W200-G1000-islands-summary-FDR0.05_filteredBR.bed
    
 done
 
